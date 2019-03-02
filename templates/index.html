@@ -1,0 +1,66 @@
+{# This simple template derives from ``base.html``. See ``base.html`` for
+    more information about template inheritance. #}
+ {%- extends "base.html" %}
+ 
+ {# Loads some of the macros included with Flask-Bootstrap. We are using the
+    utils module here to automatically render Flask's flashed messages in a
+    bootstrap friendly manner #}
+ {% import "bootstrap/utils.html" as utils %}
+ 
+ 
+ {# Inside the ``content`` is where you should place most of your own stuff.
+    This will keep scripts at the page end and a navbar you add on later
+    intact. #}
+ {% block content %}
+   <div class="container">
+     <div class="pollen">
+        <h2 class="text-center" style="color:rgb(0,0,0);">Pollen tal</h2>
+        <p class="text-monospace lead text-center" style="color:rgba(0,0,0,0.6);font-family:Roboto, sans-serif;font-size:15px;" id="last_updated">Sidst opdateret: {{ last_updated }}</p>
+     </div>
+     <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Pollen</th>
+                    <th>Øst</th>
+                    <th>Vest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El</td>
+                    <td id="el-øst">{{ el_øst }}</td>
+                    <td id="el-vest">{{ el_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Hassel</td>
+                    <td id="hassel-øst">{{ hassel_øst }}</td>
+                    <td id="hassel-vest">{{ hassel_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Elm</td>
+                    <td id="elm-øst">{{ elm_øst }}</td>
+                    <td id="elm-vest">{{ elm_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Birk</td>
+                    <td id="birk-øst">{{ birk_øst }}</td>
+                    <td id="birk-vest">{{ birk_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Græs</td>
+                    <td id="græs-øst">{{ græs_øst }}</td>
+                    <td id="græs-vest">{{ græs_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Bynke</td>
+                    <td id="bynke-øst">{{ bynke_øst }}</td>
+                    <td id="bynke-vest">{{ bynke_vest }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <p class="text-monospace lead text-center" style="color:rgba(0,0,0,0.6);font-family:Roboto, sans-serif;font-size:12px;">Data hentes fra <a href="https://twitter.com/AstmaAllergiDK">Astma-Allergi DK</a>'s twitter feed</p>
+    </div>
+ {%- endblock %}

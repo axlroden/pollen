@@ -4,6 +4,7 @@ import datetime
 import time
 import tweepy
 from tweepy import OAuthHandler
+from whitenoise import WhiteNoise
 
 frontend = Blueprint('frontend', __name__)
 last_query = ""
@@ -116,7 +117,7 @@ app = Flask(__name__)
 Bootstrap(app)
 app.register_blueprint(frontend)
 app.config.from_object('config.default')
-
+app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')
 
 if __name__ == "__main__":
     app.run(debug=True)

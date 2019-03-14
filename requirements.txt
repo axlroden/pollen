@@ -3,3 +3,4 @@ dataset
 flask
 flask_bootstrap
 gunicorn
+whitenoise

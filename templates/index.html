@@ -1,21 +1,10 @@
-{# This simple template derives from ``base.html``. See ``base.html`` for
-    more information about template inheritance. #}
  {%- extends "base.html" %}
  
- {# Loads some of the macros included with Flask-Bootstrap. We are using the
-    utils module here to automatically render Flask's flashed messages in a
-    bootstrap friendly manner #}
- {% import "bootstrap/utils.html" as utils %}
- 
- 
- {# Inside the ``content`` is where you should place most of your own stuff.
-    This will keep scripts at the page end and a navbar you add on later
-    intact. #}
  {% block content %}
    <div class="container">
      <div class="pollen">
-        <h2 class="text-center" style="color:rgb(0,0,0);">Pollen tal</h2>
-        <p class="text-monospace lead text-center" style="color:rgba(0,0,0,0.6);font-family:Roboto, sans-serif;font-size:15px;" id="last_updated">Sidst opdateret: {{ last_updated }}</p>
+        <h2 class="text-center">Pollen tal</h2>
+        <p class="text-center" id="last_updated">Sidst opdateret: {{ last_updated }}</p>
      </div>
      <div class="table-responsive">
         <table class="table">
@@ -61,8 +50,7 @@
         </table>
     </div>
     <div class="container">
-        <p class="text-monospace lead text-center" style="color:rgba(0,0,0,0.6);font-family:Roboto, sans-serif;font-size:12px;">Data hentes fra <a href="https://twitter.com/astmaallergidk">@AstmaAllergiDK</a></p>
-        <p class="text-monospace lead text-center" style="color:rgba(0,0,0,0.6);font-family:Roboto, sans-serif;font-size:12px;"><a class="github-button" href="https://github.com/axlroden/pollen" data-size="large" aria-label="pollen on GitHub">Source</a><script async defer src="https://buttons.github.io/buttons.js"></script></p>
-        
+        <p class="text-center">Data hentes fra <a href="https://twitter.com/astmaallergidk">@AstmaAllergiDK</a></p>
+        <p class="text-center"><a class="github-button" href="https://github.com/axlroden/pollen" data-size="large" aria-label="pollen on GitHub">Source</a><script async defer src="https://buttons.github.io/buttons.js"></script></p>
     </div>
  {%- endblock %}

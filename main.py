@@ -1,5 +1,4 @@
 from flask import Flask, Blueprint, render_template, jsonify
-from flask_bootstrap import Bootstrap
 import datetime
 import time
 import tweepy
@@ -114,7 +113,6 @@ def render_view():
 
 
 app = Flask(__name__)
-Bootstrap(app)
 app.register_blueprint(frontend)
 app.config.from_object('config.default')
 app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/')

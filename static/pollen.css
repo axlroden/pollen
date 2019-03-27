@@ -1,8 +1,9 @@
 .table {
     margin: 0 auto;
     width: 400px !important; 
- }
- .vis {
-     margin: 0 auto;
-     width: 900px !important; 
- }
+}
+
+p {
+    color:rgba(0,0,0,0.6);
+    font-size: 12px;
+}

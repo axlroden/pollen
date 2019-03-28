@@ -4,6 +4,7 @@ import requests
 
 api = responder.API()
 last_query = ""
+last_updated = ""
 # Id is determined from the json feed from dagenspollental website
 pollen_index = {
                '1': {'type': 'el'},

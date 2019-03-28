@@ -6,5 +6,6 @@
  {% block styles -%}
      {{super()}}
      <link rel="shortcut icon" href="{{ api.static_url('favicon.ico') }}">
+     <link rel="manifest" href="{{ api.static_url('manifest.json') }}">
      <link rel="stylesheet" type="text/css" href="{{ api.static_url('pollen.css') }}">
  {% endblock %}

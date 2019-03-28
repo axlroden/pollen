@@ -1,26 +1,30 @@
 import responder
 import datetime
 import time
-import tweepy
-from tweepy import OAuthHandler
+import requests
 from dynaconf import settings
-import sys
 
 api = responder.API()
 last_query = ""
 last_consume = ""
-last_updated= ""
-pollentypes = ['el', 'hassel', 'elm', 'birk', 'græs', 'bynke']
+last_updated = ""
+# Id is determined from the json feed from dagenspollental website
+pollen_index = {
+               '1': {'type': 'el'},
+               '2': {'type': 'hassel'},
+               '4': {'type': 'elm'},
+               '7': {'type': 'birk'},
+               '28': {'type': 'græs'},
+               '31': {'type': 'bynke'}
+               }
 pollendic = []
+
 
 @api.route('/')
 def index(req, resp):
     global last_query
     global last_updated
     global pollen_values
-    if last_query == "":
-        # Make sure we have some data.
-        check_twitter()
     # Make sure we cache for at least X seconds at a time
     if last_query == "" or last_query < datetime.datetime.now() - datetime.timedelta(minutes=settings.CACHE_TIMER):
         last_query = datetime.datetime.now()
@@ -28,93 +32,33 @@ def index(req, resp):
     resp.html = api.template('index.html', last_updated=last_updated, reload=time.time(), **pollen_values)
 
 
-@api.route("/api/info")
-def api_info(req, resp):
-    global last_consume
-    global last_updated
-    global pollen_values
-    # Consume twitter but only if not done within last X minutes
-    if last_consume == "" or last_consume < datetime.datetime.now() - datetime.timedelta(minutes=settings.CACHE_TIMER):
-        last_consume = datetime.datetime.now()
-        check_twitter()
-    last_updated, pollen_values = render_view()
-
-    info = {
-        "last_updated": last_updated,
-        **pollen_values
-    }
-    resp.media = info
-
-
-def check_twitter():
-    """ Checks for new twitter entries """
-    global pollendic
-    consumer_key = settings.CONSUMER_KEY
-    consumer_secret = settings.CONSUMER_SECRET
-    access_token = settings.ACCESS_TOKEN
-    access_secret = settings.ACCESS_SECRET
-    auth = OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_secret)
-    api = tweepy.API(auth)
-    for status in tweepy.Cursor(api.user_timeline, id='AstmaAllergiDK', tweet_mode='extended').items(5):
-        text = status.full_text.lower()
-        created = status.created_at
-        tweet_id = status.id
-        if text.startswith('dagens pollental') or text.startswith('øst:') or text.startswith('vest:'):
-            count = 0
-
-            text = text.split(('\n'))
-            dataarray = []
-
-            # If øst is not reprecented we go straight to vest.
-            if 'øst:' not in text:
-                if 'vest:' in text:
-                    count = count + 1
-            # Lets do some precessing on the tweets
-            for line in text:
-                if any(x in line for x in pollentypes):
-                    if ':' in line:
-                        splitline = line.split(':')
-                        pollen = splitline[0].strip()
-                        value = splitline[1].strip()
-                        if value.isdigit():
-                            # Simple way of figuring out what location we on
-                            if count == 1:
-                                location = 'vest'
-                            if count == 0:
-                                location = 'øst'
-
-                            datalist = {'location': location, 'pollen': pollen, 'value': value}
-                            dataarray.append(datalist)
-                # If we got trough øst, we can proceed to vest
-                if line.startswith('vest:'):
-                    count = count + 1
-
-            # Run over each pollen type and update our dictionary
-            for item in pollentypes:
-                for sublist in dataarray:
-                    if sublist['pollen'] == item:
-                        ourpollen = {'created': str(created), 
-                                     'location': sublist['location'],
-                                     'pollen': sublist['pollen'],
-                                     'value': sublist['value']
-                                    }
-                        pollendic.append(ourpollen)
-            # Break as soon as we have processed 1 tweet with pollendata
-            break
-
-
 def render_view():
     global last_updated
     global pollen_values
+
+    east = requests.get('https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_resource_id=getFeed&p_p_cacheability=cacheLevelPage&p_p_col_id=column-2&p_p_col_pos=1&p_p_col_count=3&station=48').json() # noqa
+    west = requests.get('https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_resource_id=getFeed&p_p_cacheability=cacheLevelPage&p_p_col_id=column-2&p_p_col_pos=1&p_p_col_count=3&station=49').json() # noqa
+    last_updated = east['date']
+
     pollen_values = {}
-    # Populate fields with 0 so we are not missing data in our html table.
-    for pollen in pollentypes:
-        pollen_values[pollen + '_øst'] = 0
-        pollen_values[pollen + '_vest'] = 0
-    for row in pollendic:
-        pollen_values[row['pollen'] + '_' + row['location']] = row['value']
-        last_updated = row['created']
+    # Combine these 2 at some point when your not lazy. oh and error checking?
+    for item in east['feed']:
+        # Skip shrooms
+        if item == '44' or item == '45':
+            continue
+        value = east['feed'][item]['level']
+        if value == -1:
+            value = 0
+        pollen_values['{0}_{1}'.format(pollen_index[item]['type'], 'øst')] = value
+
+    for item in west['feed']:
+        # Skip shrooms
+        if item == '44' or item == '45':
+            continue
+        value = west['feed'][item]['level']
+        if value == -1:
+            value = 0
+        pollen_values['{0}_{1}'.format(pollen_index[item]['type'], 'vest')] = value
 
     return last_updated, pollen_values
 

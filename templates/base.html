@@ -8,8 +8,3 @@
      <link rel="shortcut icon" href="{{ api.static_url('favicon.ico') }}">
      <link rel="stylesheet" type="text/css" href="{{ api.static_url('pollen.css') }}">
  {% endblock %}
- 
- {% block scripts %}
- {{super()}}
-     <script src="{{ api.static_url('pollen.js') }}?r={{ reload }}" defer></script>
- {% endblock %}

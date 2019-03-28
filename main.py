@@ -1,13 +1,9 @@
 import responder
 import datetime
-import time
 import requests
-from dynaconf import settings
 
 api = responder.API()
 last_query = ""
-last_consume = ""
-last_updated = ""
 # Id is determined from the json feed from dagenspollental website
 pollen_index = {
                '1': {'type': 'el'},
@@ -17,19 +13,16 @@ pollen_index = {
                '28': {'type': 'græs'},
                '31': {'type': 'bynke'}
                }
-pollendic = []
 
 
 @api.route('/')
 def index(req, resp):
     global last_query
-    global last_updated
-    global pollen_values
     # Make sure we cache for at least X seconds at a time
-    if last_query == "" or last_query < datetime.datetime.now() - datetime.timedelta(minutes=settings.CACHE_TIMER):
+    if last_query == "" or last_query < datetime.datetime.now() - datetime.timedelta(minutes=15):
         last_query = datetime.datetime.now()
         last_updated, pollen_values = render_view()
-    resp.html = api.template('index.html', last_updated=last_updated, reload=time.time(), **pollen_values)
+    resp.html = api.template('index.html', last_updated=last_updated, **pollen_values)
 
 
 def render_view():

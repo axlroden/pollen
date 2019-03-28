@@ -4,10 +4,12 @@ import time
 import tweepy
 from tweepy import OAuthHandler
 from dynaconf import settings
+import sys
 
 api = responder.API()
 last_query = ""
 last_consume = ""
+last_updated= ""
 pollentypes = ['el', 'hassel', 'elm', 'birk', 'græs', 'bynke']
 pollendic = []
 
@@ -16,7 +18,6 @@ def index(req, resp):
     global last_query
     global last_updated
     global pollen_values
-    last_updated = ""
     if last_query == "":
         # Make sure we have some data.
         check_twitter()
@@ -104,6 +105,8 @@ def check_twitter():
 
 
 def render_view():
+    global last_updated
+    global pollen_values
     pollen_values = {}
     # Populate fields with 0 so we are not missing data in our html table.
     for pollen in pollentypes:

@@ -19,6 +19,7 @@ pollen_index = {
 @api.route('/')
 def index(req, resp):
     global last_query
+    global last_updated
     # Make sure we cache for at least X seconds at a time
     if last_query == "" or last_query < datetime.datetime.now() - datetime.timedelta(minutes=15):
         last_query = datetime.datetime.now()

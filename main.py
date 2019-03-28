@@ -8,7 +8,6 @@ from dynaconf import settings
 api = responder.API()
 last_query = ""
 last_consume = ""
-last_updated = ""
 pollentypes = ['el', 'hassel', 'elm', 'birk', 'græs', 'bynke']
 pollendic = []
 
@@ -17,6 +16,7 @@ def index(req, resp):
     global last_query
     global last_updated
     global pollen_values
+    last_updated = ""
     if last_query == "":
         # Make sure we have some data.
         check_twitter()

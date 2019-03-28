@@ -8,6 +8,7 @@ from dynaconf import settings
 api = responder.API()
 last_query = ""
 last_consume = ""
+last_updated = ""
 pollentypes = ['el', 'hassel', 'elm', 'birk', 'græs', 'bynke']
 pollendic = []
 

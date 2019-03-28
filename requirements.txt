@@ -1,4 +1,4 @@
 tweepy
-flask
-gunicorn
-whitenoise
+dynaconf
+responder
+asgiref==2.3.2

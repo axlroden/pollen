@@ -1,2 +1,2 @@
-responder
+https://github.com/kennethreitz/responder.git
 cachetools

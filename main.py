@@ -33,7 +33,7 @@ def render_pollen(location, feed):
         s = requests.Session()
         r = s.get(feed)
         jsessionid = r.cookies['JSESSIONID']
-        r = requests.get('{0}&s={1}'.format(feed, jsessionid)).json()
+        r = s.get('{0}&s={1}'.format(feed, jsessionid)).json()
     except requests.exceptions.RequestException as e:
         print(e)
         sys.stdout.flush()

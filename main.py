@@ -25,6 +25,23 @@ def index(req, resp):
     pollen_values = {**west, **east}
     resp.html = api.template('index.html', last_updated=last_updated, **pollen_values)
 
+@cached(cache)
+@api.route('/siri-east')
+def index(req, resp):
+    last_updated, east = render_pollen('øst', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=48') # noqa
+    # Merge dictionaries
+    pollen_values = {**est, **east}
+    resp.html = api.template('siri-east.html', last_updated=last_updated, **pollen_values)
+
+@cached(cache)
+@api.route('/siri-west')
+def index(req, resp):
+    last_updated, west = render_pollen('vest', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=49') # noqa
+    # Merge dictionaries
+    pollen_values = {**west, **west}
+    resp.html = api.template('siri-west.html', last_updated=last_updated, **pollen_values)
+
+
 
 @cached(cache)
 def render_pollen(location, feed):

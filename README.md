@@ -22,4 +22,9 @@ How to add to homescreen on mobile:
 **IOS Shortcuts**
 
 Create a shortcut to be able to ask Siri for pollen figures. (great in the car)
+
+Change to http://pollen.axlrod.dk/siri-east or http://pollen.axlrod.dk/siri-west
+
+Or create a shortcut for both.
+
 ![Shortcuts](static/shortcuts.jpg?raw=true "Shortcuts")

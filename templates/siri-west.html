@@ -1,0 +1,48 @@
+ {%- extends "base.html" %}
+
+ {% block content %}
+   <div class="container">
+     <div class="pollen">
+        <h1 class="text-center">Pollen tal</h1>
+     </div>
+     <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Pollen</th>
+                    <th>Vest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El</td>
+                    <td id="el-vest">{{ el_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Hassel</td>
+                    <td id="hassel-vest">{{ hassel_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Elm</td>
+                    <td id="elm-vest">{{ elm_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Birk</td>
+                    <td id="birk-vest">{{ birk_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Græs</td>
+                    <td id="græs-vest">{{ græs_vest }}</td>
+                </tr>
+                <tr>
+                    <td>Bynke</td>
+                    <td id="bynke-vest">{{ bynke_vest }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+    <p class="text-center" id="last_updated">Fra: {{last_updated|date:'d'}}</p>
+
+    </div>
+ {%- endblock %}

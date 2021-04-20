@@ -19,8 +19,8 @@ pollen_index = {
 @cached(cache)
 @api.route('/')
 def index(req, resp):
-    last_updated, east = render_pollen('øst', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_resource_id=getFeed&p_p_cacheability=cacheLevelPage&p_p_col_id=column-2&p_p_col_pos=1&p_p_col_count=3&station=48') # noqa
-    last_updated, west = render_pollen('vest', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_resource_id=getFeed&p_p_cacheability=cacheLevelPage&p_p_col_id=column-2&p_p_col_pos=1&p_p_col_count=3&station=49') # noqa
+    last_updated, east = render_pollen('øst', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=48') # noqa
+    last_updated, west = render_pollen('vest', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=49') # noqa
     # Merge dictionaries
     pollen_values = {**west, **east}
     resp.html = api.template('index.html', last_updated=last_updated, **pollen_values)
@@ -30,7 +30,10 @@ def index(req, resp):
 def render_pollen(location, feed):
     pollen_values = {}
     try:
-        r = requests.get(feed).json()
+        s = requests.Session()
+        r = s.get(feed)
+        jsessionid = r.cookies['JSESSIONID']
+        r = s.get('{0}&s={1}'.format(feed, jsessionid)).json()
     except requests.exceptions.RequestException as e:
         print(e)
         sys.stdout.flush()

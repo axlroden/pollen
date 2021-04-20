@@ -30,7 +30,7 @@ def index(req, resp):
 def index(req, resp):
     last_updated, east = render_pollen('øst', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=48') # noqa
     # Merge dictionaries
-    pollen_values = {**est, **east}
+    pollen_values = {**east, **east}
     resp.html = api.template('siri-east.html', last_updated=last_updated, **pollen_values)
 
 @cached(cache)

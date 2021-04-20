@@ -58,7 +58,7 @@ def render_pollen(location, feed):
             continue
         value = r['feed'][item]['level']
         if value == -1:
-            value = "-"
+            value = "0"
         pollen_values['{0}_{1}'.format(pollen_index[item]['type'], location)] = value
     return r['date'], pollen_values
 

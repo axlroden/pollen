@@ -3,40 +3,52 @@
  {% block content %}
    <div class="container">
      <div class="pollen">
-        <h1 class="text-center">Pollen tal øst.</h1>
+        <h1 class="text-center">Pollen east.</h1>
      </div>
      <div class="table-responsive">
         <table class="table">
             <tbody>
+                {%+ if el_øst != 0 %}
                 <tr>
-                    <td>El</td>
+                    <td>Alder</td>
                     <td id="el-øst">{{ el_øst }}</td>
                 </tr>
+                {% endif %}
+                {%+ if hassel_øst != 0 %}
                 <tr>
-                    <td>Hassel</td>
+                    <td>Hazel</td>
                     <td id="hassel-øst">{{ hassel_øst }}</td>
                 </tr>
+                {% endif %}
+                {%+ if elm_øst != 0 %}
                 <tr>
                     <td>Elm</td>
                     <td id="elm-øst">{{ elm_øst }}</td>
                 </tr>
+                {% endif %}
+                {%+ if birk_øst != 0 %}
                 <tr>
-                    <td>Birk</td>
+                    <td>Birch</td>
                     <td id="birk-øst">{{ birk_øst }}</td>
                 </tr>
+                {% endif %}
+                {%+ if græs_øst != 0 %}
                 <tr>
-                    <td>Græs</td>
+                    <td>Grass</td>
                     <td id="græs-øst">{{ græs_øst }}</td>
                 </tr>
+                {% endif %}
+                {%+ if bynke_øst != 0 %}
                 <tr>
-                    <td>Bynke</td>
+                    <td>Pine</td>
                     <td id="bynke-øst">{{ bynke_øst }}</td>
                 </tr>
+                {% endif %}
             </tbody>
         </table>
     </div>
     <div class="container">
-    <p class="text-center" id="last_updated">Fra den {{ last_updated }}.</p>
+    <p class="text-center" id="last_updated">From {{ last_updated }}.</p>
 
     </div>
  {%- endblock %}

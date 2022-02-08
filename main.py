@@ -19,49 +19,44 @@ pollen_index = {
 @cached(cache)
 @api.route('/')
 def index(req, resp):
-    last_updated, east = render_pollen('øst', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=48') # noqa
-    last_updated, west = render_pollen('vest', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=49') # noqa
-    # Merge dictionaries
-    pollen_values = {**west, **east}
-    resp.html = api.template('index.html', last_updated=last_updated, **pollen_values)
+    pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.html = api.template('index.html', last_updated=pollen_data['48']['date'], **pollen_data)
 
 @cached(cache)
 @api.route('/siri-east')
 def index(req, resp):
-    last_updated, east = render_pollen('øst', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=48') # noqa
-    resp.html = api.template('siri-east.html', last_updated=last_updated, **east)
+    pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.html = api.template('siri-east.html', last_updated=pollen_data['48']['date'], **pollen_data)
 
 @cached(cache)
 @api.route('/siri-west')
 def index(req, resp):
-    last_updated, west = render_pollen('vest', 'https://hoefeber.astma-allergi.dk/hoefeber/pollen/dagenspollental?p_p_id=pollenbox_WAR_pollenportlet&p_p_lifecycle=2&station=49') # noqa
-    resp.html = api.template('siri-west.html', last_updated=last_updated, **west)
-
-
+    pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.html = api.template('siri-west.html', last_updated=pollen_data['49']['date'], **pollen_data)
 
 @cached(cache)
-def render_pollen(location, feed):
+def render_pollen(feed):
     pollen_values = {}
     try:
-        s = requests.Session()
-        r = s.get(feed)
-        jsessionid = r.cookies['JSESSIONID']
-        r = s.get('{0}&s={1}'.format(feed, jsessionid)).json()
+        r = requests.get(feed)
+        feed_values = r.json()
     except requests.exceptions.RequestException as e:
         print(e)
         sys.stdout.flush()
         return "", pollen_values
-
-    for item in r['feed']:
-        # Skip shrooms
-        if item == '44' or item == '45':
-            continue
-        value = r['feed'][item]['level']
-        if value == -1:
-            value = "0"
-        pollen_values['{0}_{1}'.format(pollen_index[item]['type'], location)] = value
-    return r['date'], pollen_values
-
+    for item in feed_values:
+        if item == '48':
+            location = 'øst'
+        elif item == '49':
+            location = 'vest'
+        else:
+            location = ''
+        for pollen in item['data']:
+            value = pollen['level']
+            if value == -1:
+                value = "0"
+            pollen_values['{0}_{1}'.format(pollen_index[pollen]['type'], location)] = value
+    return pollen_values
 
 if __name__ == "__main__":
     api.run()

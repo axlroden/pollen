@@ -1,2 +1,3 @@
-git+https://github.com/kennethreitz/responder.git
+responder
+typesystem==0.2.5
 cachetools

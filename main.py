@@ -18,16 +18,25 @@ pollen_index = {
 @api.route('/')
 def index(req, resp):
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    resp.headers["Pragma"] = "no-cache"
+    resp.headers["Expires"] = "0"
     resp.html = api.template('index.html', last_updated=date, **pollen_data)
 
 @api.route('/siri-east')
 def index(req, resp):
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    resp.headers["Pragma"] = "no-cache"
+    resp.headers["Expires"] = "0"
     resp.html = api.template('siri-east.html', last_updated=date, **pollen_data)
 
 @api.route('/siri-west')
 def index(req, resp):
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    resp.headers["Pragma"] = "no-cache"
+    resp.headers["Expires"] = "0"
     resp.html = api.template('siri-west.html', last_updated=date, **pollen_data)
 
 def render_pollen(feed):

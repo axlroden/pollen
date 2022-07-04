@@ -1,17 +1,14 @@
 {%- extends "base.html" %}
-
 {% block content %}
   <div class="container">
     <div class="pollen">
        <h1 class="text-center">Pollen west.</h1>
     </div>
-
     {%+ if (el_vest != "0") %}
     <div>
     Alder {{ el_vest }}.
    </div>
     {% endif %}
-
     {%+ if (hassel_vest != "0") %}
     <div>
     Hazel {{ hassel_vest }}.
@@ -37,6 +34,5 @@
    {% endif %}
    <div class="container">
    <p class="text-center" id="last_updated">From {{ last_updated }}.</p>
-
    </div>
 {%- endblock %}

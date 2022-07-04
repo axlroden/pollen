@@ -1,1405 +1,1405 @@
 {
     "name": "projects/pollen-1bb54/databases/(default)/documents/allergensDailyFeed/feed",
     "fields": {
-      "48": {
-        "mapValue": {
-          "fields": {
-            "data": {
-              "mapValue": {
+        "48": {
+            "mapValue": {
                 "fields": {
-                  "45": {
-                    "mapValue": {
-                      "fields": {
-                        "level": {
-                          "integerValue": "13673"
-                        },
-                        "predictions": {
-                          "mapValue": {
+                    "data": {
+                        "mapValue": {
                             "fields": {
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
+                                "45": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "level": {
+                                                "integerValue": "13673"
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "03-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "3"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "inSeason": {
+                                                "booleanValue": true
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {
+                                                    "values": [
+                                                        {
+                                                            "stringValue": "3"
+                                                        },
+                                                        {
+                                                            "nullValue": null
+                                                        },
+                                                        {
+                                                            "nullValue": null
+                                                        },
+                                                        {
+                                                            "nullValue": null
+                                                        },
+                                                        {
+                                                            "nullValue": null
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
                                     }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
+                                },
+                                "28": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "inSeason": {
+                                                "booleanValue": true
+                                            },
+                                            "level": {
+                                                "integerValue": "46"
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "3"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "2"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {
+                                                    "values": [
+                                                        {
+                                                            "stringValue": "3"
+                                                        },
+                                                        {
+                                                            "stringValue": "2"
+                                                        },
+                                                        {
+                                                            "stringValue": "2"
+                                                        },
+                                                        {
+                                                            "stringValue": "1"
+                                                        },
+                                                        {
+                                                            "stringValue": "1"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
                                     }
-                                  }
-                                }
-                              },
-                              "03-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": "3"
+                                },
+                                "1": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            }
+                                        }
                                     }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
+                                },
+                                "2": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
+                                },
+                                "31": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            }
+                                        }
                                     }
-                                  }
+                                },
+                                "44": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "level": {
+                                                "integerValue": "74"
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "03-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "2"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {
+                                                    "values": [
+                                                        {
+                                                            "stringValue": "2"
+                                                        },
+                                                        {
+                                                            "nullValue": null
+                                                        },
+                                                        {
+                                                            "nullValue": null
+                                                        },
+                                                        {
+                                                            "nullValue": null
+                                                        },
+                                                        {
+                                                            "nullValue": null
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "inSeason": {
+                                                "booleanValue": true
+                                            }
+                                        }
+                                    }
+                                },
+                                "4": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            }
+                                        }
+                                    }
+                                },
+                                "7": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "level": {
+                                                "integerValue": "-1"
+                                            },
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
-                              }
                             }
-                          }
-                        },
-                        "inSeason": {
-                          "booleanValue": true
-                        },
-                        "overrides": {
-                          "arrayValue": {
-                            "values": [
-                              {
-                                "stringValue": "3"
-                              },
-                              {
-                                "nullValue": null
-                              },
-                              {
-                                "nullValue": null
-                              },
-                              {
-                                "nullValue": null
-                              },
-                              {
-                                "nullValue": null
-                              }
-                            ]
-                          }
                         }
-                      }
+                    },
+                    "date": {
+                        "stringValue": "03-07-2022"
                     }
-                  },
-                  "28": {
-                    "mapValue": {
-                      "fields": {
-                        "inSeason": {
-                          "booleanValue": true
-                        },
-                        "level": {
-                          "integerValue": "46"
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": "3"
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "2"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "overrides": {
-                          "arrayValue": {
-                            "values": [
-                              {
-                                "stringValue": "3"
-                              },
-                              {
-                                "stringValue": "2"
-                              },
-                              {
-                                "stringValue": "2"
-                              },
-                              {
-                                "stringValue": "1"
-                              },
-                              {
-                                "stringValue": "1"
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "1": {
-                    "mapValue": {
-                      "fields": {
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": false
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "inSeason": {
-                          "booleanValue": false
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        }
-                      }
-                    }
-                  },
-                  "2": {
-                    "mapValue": {
-                      "fields": {
-                        "inSeason": {
-                          "booleanValue": false
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": false
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "31": {
-                    "mapValue": {
-                      "fields": {
-                        "inSeason": {
-                          "booleanValue": false
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        }
-                      }
-                    }
-                  },
-                  "44": {
-                    "mapValue": {
-                      "fields": {
-                        "level": {
-                          "integerValue": "74"
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "03-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "2"
-                                    },
-                                    "isML": {
-                                      "booleanValue": false
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "overrides": {
-                          "arrayValue": {
-                            "values": [
-                              {
-                                "stringValue": "2"
-                              },
-                              {
-                                "nullValue": null
-                              },
-                              {
-                                "nullValue": null
-                              },
-                              {
-                                "nullValue": null
-                              },
-                              {
-                                "nullValue": null
-                              }
-                            ]
-                          }
-                        },
-                        "inSeason": {
-                          "booleanValue": true
-                        }
-                      }
-                    }
-                  },
-                  "4": {
-                    "mapValue": {
-                      "fields": {
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "inSeason": {
-                          "booleanValue": false
-                        }
-                      }
-                    }
-                  },
-                  "7": {
-                    "mapValue": {
-                      "fields": {
-                        "level": {
-                          "integerValue": "-1"
-                        },
-                        "inSeason": {
-                          "booleanValue": false
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": false
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
-              }
-            },
-            "date": {
-              "stringValue": "03-07-2022"
             }
-          }
-        }
-      },
-      "49": {
-        "mapValue": {
-          "fields": {
-            "date": {
-              "stringValue": "03-07-2022"
-            },
-            "data": {
-              "mapValue": {
+        },
+        "49": {
+            "mapValue": {
                 "fields": {
-                  "28": {
-                    "mapValue": {
-                      "fields": {
-                        "predictions": {
-                          "mapValue": {
+                    "date": {
+                        "stringValue": "03-07-2022"
+                    },
+                    "data": {
+                        "mapValue": {
                             "fields": {
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "2"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
+                                "28": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "2"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "2"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "2"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "3"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "2"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "inSeason": {
+                                                "booleanValue": true
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {
+                                                    "values": [
+                                                        {
+                                                            "stringValue": "3"
+                                                        },
+                                                        {
+                                                            "stringValue": "2"
+                                                        },
+                                                        {
+                                                            "stringValue": "2"
+                                                        },
+                                                        {
+                                                            "stringValue": "2"
+                                                        },
+                                                        {
+                                                            "stringValue": "2"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "level": {
+                                                "integerValue": "74"
+                                            }
+                                        }
                                     }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "2"
+                                },
+                                "1": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            }
+                                        }
                                     }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "2"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
+                                },
+                                "44": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "inSeason": {
+                                                "booleanValue": true
+                                            },
+                                            "overrides": {
+                                                "nullValue": null
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "03-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            }
+                                        }
                                     }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "3"
-                                    },
-                                    "isML": {
-                                      "booleanValue": false
+                                },
+                                "2": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            }
+                                        }
                                     }
-                                  }
-                                }
-                              },
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "2"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
+                                },
+                                "45": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "inSeason": {
+                                                "booleanValue": true
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "03-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "overrides": {
+                                                "nullValue": null
+                                            }
+                                        }
                                     }
-                                  }
+                                },
+                                "31": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            }
+                                        }
+                                    }
+                                },
+                                "7": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            }
+                                        }
+                                    }
+                                },
+                                "4": {
+                                    "mapValue": {
+                                        "fields": {
+                                            "inSeason": {
+                                                "booleanValue": false
+                                            },
+                                            "level": {
+                                                "integerValue": "-1"
+                                            },
+                                            "overrides": {
+                                                "arrayValue": {}
+                                            },
+                                            "predictions": {
+                                                "mapValue": {
+                                                    "fields": {
+                                                        "08-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "06-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "07-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "04-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "prediction": {
+                                                                        "stringValue": ""
+                                                                    },
+                                                                    "isML": {
+                                                                        "booleanValue": false
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "05-07-2022": {
+                                                            "mapValue": {
+                                                                "fields": {
+                                                                    "isML": {
+                                                                        "booleanValue": true
+                                                                    },
+                                                                    "prediction": {
+                                                                        "stringValue": "1"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
-                              }
                             }
-                          }
-                        },
-                        "inSeason": {
-                          "booleanValue": true
-                        },
-                        "overrides": {
-                          "arrayValue": {
-                            "values": [
-                              {
-                                "stringValue": "3"
-                              },
-                              {
-                                "stringValue": "2"
-                              },
-                              {
-                                "stringValue": "2"
-                              },
-                              {
-                                "stringValue": "2"
-                              },
-                              {
-                                "stringValue": "2"
-                              }
-                            ]
-                          }
-                        },
-                        "level": {
-                          "integerValue": "74"
                         }
-                      }
                     }
-                  },
-                  "1": {
-                    "mapValue": {
-                      "fields": {
-                        "inSeason": {
-                          "booleanValue": false
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        }
-                      }
-                    }
-                  },
-                  "44": {
-                    "mapValue": {
-                      "fields": {
-                        "inSeason": {
-                          "booleanValue": true
-                        },
-                        "overrides": {
-                          "nullValue": null
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "03-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        }
-                      }
-                    }
-                  },
-                  "2": {
-                    "mapValue": {
-                      "fields": {
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "inSeason": {
-                          "booleanValue": false
-                        }
-                      }
-                    }
-                  },
-                  "45": {
-                    "mapValue": {
-                      "fields": {
-                        "inSeason": {
-                          "booleanValue": true
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "03-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "overrides": {
-                          "nullValue": null
-                        }
-                      }
-                    }
-                  },
-                  "31": {
-                    "mapValue": {
-                      "fields": {
-                        "inSeason": {
-                          "booleanValue": false
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": false
-                                    },
-                                    "prediction": {
-                                      "stringValue": ""
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        }
-                      }
-                    }
-                  },
-                  "7": {
-                    "mapValue": {
-                      "fields": {
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": false
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "inSeason": {
-                          "booleanValue": false
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        }
-                      }
-                    }
-                  },
-                  "4": {
-                    "mapValue": {
-                      "fields": {
-                        "inSeason": {
-                          "booleanValue": false
-                        },
-                        "level": {
-                          "integerValue": "-1"
-                        },
-                        "overrides": {
-                          "arrayValue": {}
-                        },
-                        "predictions": {
-                          "mapValue": {
-                            "fields": {
-                              "08-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              },
-                              "06-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "07-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    },
-                                    "isML": {
-                                      "booleanValue": true
-                                    }
-                                  }
-                                }
-                              },
-                              "04-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "prediction": {
-                                      "stringValue": ""
-                                    },
-                                    "isML": {
-                                      "booleanValue": false
-                                    }
-                                  }
-                                }
-                              },
-                              "05-07-2022": {
-                                "mapValue": {
-                                  "fields": {
-                                    "isML": {
-                                      "booleanValue": true
-                                    },
-                                    "prediction": {
-                                      "stringValue": "1"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
-              }
             }
-          }
         }
-      }
     },
     "createTime": "2022-02-24T14:19:22.460357Z",
     "updateTime": "2022-07-03T14:08:12.151905Z"
-  }
+}

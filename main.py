@@ -63,7 +63,7 @@ def render_pollen(feed):
         if item == '44' or item == '45':
             continue
         value = feed_values_east[item]["mapValue"]["fields"]["level"]["integerValue"]
-        if value == -1:
+        if value == "-1":
             value = "0"
         pollen_values['{0}_{1}'.format(pollen_index[item]["type"], location)] = value
     location = "vest"
@@ -71,7 +71,7 @@ def render_pollen(feed):
         if item == '44' or item == '45':
             continue
         value = feed_values_east[item]["mapValue"]["fields"]["level"]["integerValue"]
-        if value == -1:
+        if value == "-1":
             value = "0"
         pollen_values['{0}_{1}'.format(pollen_index[item]["type"], location)] = value
     return update_time, pollen_values

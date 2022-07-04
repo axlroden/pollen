@@ -3,6 +3,8 @@ import requests
 import json
 import sys
 from datetime import datetime
+import locale
+
 
 api = responder.API()
 # Id is determined from the json feed from dagenspollental website
@@ -18,6 +20,7 @@ pollen_index = {
 
 @api.route('/')
 def index(req, resp):
+    locale.setlocale(locale.LC_TIME, 'da_DK.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
     resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     resp.headers["Pragma"] = "no-cache"
@@ -27,6 +30,7 @@ def index(req, resp):
 
 @api.route('/siri-east')
 def east(req, resp):
+    locale.setlocale(locale.LC_TIME, 'en_US.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
     resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     resp.headers["Pragma"] = "no-cache"
@@ -36,6 +40,7 @@ def east(req, resp):
 
 @api.route('/siri-west')
 def west(req, resp):
+    locale.setlocale(locale.LC_TIME, 'en_US.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
     resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     resp.headers["Pragma"] = "no-cache"
@@ -70,7 +75,7 @@ def render_pollen(feed):
     for item in feed_values_west:
         if item == '44' or item == '45':
             continue
-        value = feed_values_east[item]["mapValue"]["fields"]["level"]["integerValue"]
+        value = feed_values_west[item]["mapValue"]["fields"]["level"]["integerValue"]
         if value == "-1":
             value = "0"
         pollen_values['{0}_{1}'.format(pollen_index[item]["type"], location)] = value

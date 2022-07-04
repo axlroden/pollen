@@ -2,10 +2,8 @@ import responder
 import requests
 import json
 import sys
-from cachetools import cached, TTLCache
 
 api = responder.API()
-cache = TTLCache(maxsize=1000, ttl=900)
 # Id is determined from the json feed from dagenspollental website
 pollen_index = {
                '1': {'type': 'el'},
@@ -17,25 +15,30 @@ pollen_index = {
                }
 
 
-@cached(cache)
 @api.route('/')
 def index(req, resp):
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    resp.headers["Pragma"] = "no-cache"
+    resp.headers["Expires"] = "0"
     resp.html = api.template('index.html', last_updated=date, **pollen_data)
 
-@cached(cache)
 @api.route('/siri-east')
 def index(req, resp):
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    resp.headers["Pragma"] = "no-cache"
+    resp.headers["Expires"] = "0"
     resp.html = api.template('siri-east.html', last_updated=date, **pollen_data)
 
-@cached(cache)
 @api.route('/siri-west')
 def index(req, resp):
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    resp.headers["Pragma"] = "no-cache"
+    resp.headers["Expires"] = "0"
     resp.html = api.template('siri-west.html', last_updated=date, **pollen_data)
 
-@cached(cache)
 def render_pollen(feed):
     pollen_values = {}
     try:

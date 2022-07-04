@@ -5,48 +5,36 @@
      <div class="pollen">
         <h1 class="text-center">Pollen east.</h1>
      </div>
-     <div class="table-responsive">
-        <table class="table">
-            <tbody>
-                {%+ if (el_øst != "0") %}
-                <tr>
-                    <td>Alder</td>
-                    <td id="el-øst">{{ el_øst }}</td>
-                </tr>
-                {% endif %}
-                {%+ if (hassel_øst != "0") %}
-                <tr>
-                    <td>Hazel</td>
-                    <td id="hassel-øst">{{ hassel_øst }}</td>
-                </tr>
-                {% endif %}
-                {%+ if (elm_øst != "0") %}
-                <tr>
-                    <td>Elm</td>
-                    <td id="elm-øst">{{ elm_øst }}</td>
-                </tr>
-                {% endif %}
-                {%+ if (birk_øst != "0") %}
-                <tr>
-                    <td>Birch</td>
-                    <td id="birk-øst">{{ birk_øst }}</td>
-                </tr>
-                {% endif %}
-                {%+ if (græs_øst != "0") %}
-                <tr>
-                    <td>Grass</td>
-                    <td id="græs-øst">{{ græs_øst }}</td>
-                </tr>
-                {% endif %}
-                {%+ if (bynke_øst != "0") %}
-                <tr>
-                    <td>Pine</td>
-                    <td id="bynke-øst">{{ bynke_øst }}</td>
-                </tr>
-                {% endif %}
-            </tbody>
-        </table>
+
+     {%+ if (el_øst != "0") %}
+     <div>
+     Alder {{ el_øst }}.
     </div>
+     {% endif %}
+
+     {%+ if (hassel_øst != "0") %}
+     <div>
+     Hazel {{ hassel_øst }}.
+    </div>
+     {% endif %}
+     {%+ if (elm_øst != "0") %}
+     <div>
+     Elm {{ elm_øst }}.
+     </div>
+     {% endif %}
+     {%+ if (birk_øst != "0") %}
+     Birch {{ birk_øst }}.
+    </div>
+    {% endif %}
+    {%+ if (græs_øst != "0") %}
+    <div>
+    Grass {{ græs_øst }}.
+    </div>
+    {% endif %}
+    {%+ if (bynke_øst != "0") %}
+    Pine {{ bynke_øst }}.
+    </div>
+    {% endif %}
     <div class="container">
     <p class="text-center" id="last_updated">From {{ last_updated }}.</p>
 

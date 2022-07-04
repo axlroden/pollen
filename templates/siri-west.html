@@ -1,42 +1,42 @@
- {%- extends "base.html" %}
+{%- extends "base.html" %}
 
- {% block content %}
+{% block content %}
+  <div class="container">
+    <div class="pollen">
+       <h1 class="text-center">Pollen west.</h1>
+    </div>
+
+    {%+ if (el_vest != "0") %}
+    <div>
+    Alder {{ el_vest }}.
+   </div>
+    {% endif %}
+
+    {%+ if (hassel_vest != "0") %}
+    <div>
+    Hazel {{ hassel_vest }}.
+   </div>
+    {% endif %}
+    {%+ if (elm_vest != "0") %}
+    <div>
+    Elm {{ elm_vest }}.
+    </div>
+    {% endif %}
+    {%+ if (birk_vest != "0") %}
+    Birch {{ birk_vest }}.
+   </div>
+   {% endif %}
+   {%+ if (græs_vest != "0") %}
+   <div>
+   Grass {{ græs_vest }}.
+   </div>
+   {% endif %}
+   {%+ if (bynke_vest != "0") %}
+   Pine {{ bynke_vest }}.
+   </div>
+   {% endif %}
    <div class="container">
-     <div class="pollen">
-        <h1 class="text-center">Pollen tal vest.</h1>
-     </div>
-     <div class="table-responsive">
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td>El</td>
-                    <td id="el-vest">{{ el_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Hassel</td>
-                    <td id="hassel-vest">{{ hassel_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Elm</td>
-                    <td id="elm-vest">{{ elm_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Birk</td>
-                    <td id="birk-vest">{{ birk_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Græs</td>
-                    <td id="græs-vest">{{ græs_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Bynke</td>
-                    <td id="bynke-vest">{{ bynke_vest }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="container">
-    <p class="text-center" id="last_updated">Fra den {{ last_updated }}.</p>
+   <p class="text-center" id="last_updated">From {{ last_updated }}.</p>
 
-    </div>
- {%- endblock %}
+   </div>
+{%- endblock %}

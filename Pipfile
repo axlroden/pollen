@@ -5,10 +5,9 @@ name = "pypi"
 
 [packages]
 responder = "*"
-cachetools = "*"
 typesystem = "==0.2.5"
 
 [dev-packages]
 
 [requires]
-python_version = "3.8"
+python_version = "3.10"

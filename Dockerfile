@@ -7,9 +7,9 @@ ENV LANG C.UTF-8
 ENV PYTHONDONTWRITEBYTECODE 1
 
 # -- Install Pipenv:
-RUN apt update
-RUN apt upgrade -y
-RUN apt install python3.10-dev libffi-dev language-pack-da -y
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install python3.10-dev libffi-dev language-pack-da -y
 RUN curl --silent https://bootstrap.pypa.io/get-pip.py | python3.10
 
 # Backwards compatility.

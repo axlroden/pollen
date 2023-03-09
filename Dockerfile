@@ -12,20 +12,12 @@ RUN curl --silent https://bootstrap.pypa.io/get-pip.py | python3.10
 
 # Backwards compatility.
 RUN rm -fr /usr/bin/python3 && ln /usr/bin/python3.10 /usr/bin/python3
-
-RUN pip3 install pipenv
+RUN pip3 install responder typesystem==0.2.5
 
 # -- Install Application into container:
 RUN set -ex && mkdir /app
 
 WORKDIR /app
-
-# -- Adding Pipfiles
-COPY Pipfile Pipfile
-COPY Pipfile.lock Pipfile.lock
-
-# -- Install dependencies:
-RUN set -ex && pipenv install --deploy --system
 
 ENV PORT '80'
 COPY . /app

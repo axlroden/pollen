@@ -5,9 +5,13 @@ ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV PYTHONDONTWRITEBYTECODE 1
 
-# -- Install
-RUN apt-get update
-RUN apt-get install language-pack-da python3-pip -y
+RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
+    --mount=target=/var/cache/apt,type=cache,sharing=locked \
+    rm -f /etc/apt/apt.conf.d/docker-clean \
+    && apt-get update \
+    && apt-get -y --no-install-recommends install \
+        language-pack-da language-pack-da-base \
+        python3-pip python3-pkg-resources python3-setuptools python3-wheel
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt

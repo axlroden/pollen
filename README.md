@@ -1,7 +1,9 @@
 # pollen
 Danish pollen stats
 
-This was built for a free account on herokuapp.com
+~~This was built for a free account on herokuapp.com~~
+
+Docker containerized instead of Heroku as their free program is gone.
 
 I have added some meta data to make Android/IOS app look decent.
 

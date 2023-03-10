@@ -1,6 +1,7 @@
 .table {
     margin: 0 auto;
-    width: 400px !important; 
+    width: 300px !important; 
+    font-size: 25px;
 }
 
 p {

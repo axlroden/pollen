@@ -1,52 +1,65 @@
-import responder
+from starlette.applications import Starlette
+from starlette.routing import Route
+from starlette.templating import Jinja2Templates
+from starlette.routing import Mount
+from starlette.staticfiles import StaticFiles
+import uvicorn
 import requests
 import json
 import sys
 from datetime import datetime
 import locale
 
-
-api = responder.API()
 # Id is determined from the json feed from dagenspollental website
 pollen_index = {
-               '1': {'type': 'el'},
-               '2': {'type': 'hassel'},
-               '4': {'type': 'elm'},
-               '7': {'type': 'birk'},
-               '28': {'type': 'græs'},
-               '31': {'type': 'bynke'}
-               }
+    '1': {'type': 'el'},
+    '2': {'type': 'hassel'},
+    '4': {'type': 'elm'},
+    '7': {'type': 'birk'},
+    '28': {'type': 'græs'},
+    '31': {'type': 'bynke'}
+}
+templates = Jinja2Templates(directory="templates")
 
-
-@api.route('/')
-def index(req, resp):
+async def index(request):
     locale.setlocale(locale.LC_TIME, 'da_DK.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
-    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    resp.headers["Pragma"] = "no-cache"
-    resp.headers["Expires"] = "0"
-    resp.html = api.template('index.html', last_updated=date, **pollen_data)
+    headers = {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0"
+    }
+    content = templates.TemplateResponse("index.html",
+                                         {"request": request, "last_updated": date, **pollen_data},
+                                         headers=headers)
+    return content
 
 
-@api.route('/siri-east')
-def east(req, resp):
+async def east(request):
     locale.setlocale(locale.LC_TIME, 'en_US.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
-    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    resp.headers["Pragma"] = "no-cache"
-    resp.headers["Expires"] = "0"
-    resp.html = api.template('siri-east.html', last_updated=date, **pollen_data)
+    headers = {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0"
+    }
+    content = templates.TemplateResponse("siri-east.html",
+                                         {"request": request, "last_updated": date, **pollen_data},
+                                         headers=headers)
+    return content
 
-
-@api.route('/siri-west')
-def west(req, resp):
+async def west(request):
     locale.setlocale(locale.LC_TIME, 'en_US.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
-    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    resp.headers["Pragma"] = "no-cache"
-    resp.headers["Expires"] = "0"
-    resp.html = api.template('siri-west.html', last_updated=date, **pollen_data)
-
+    headers = {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0"
+    }
+    content = templates.TemplateResponse("siri-west.html",
+                                         {"request": request, "last_updated": date, **pollen_data},
+                                         headers=headers)
+    return content
 
 def render_pollen(feed):
     pollen_values = {}
@@ -82,5 +95,13 @@ def render_pollen(feed):
     return update_time, pollen_values
 
 
-if __name__ == "__main__":
-    api.run()
+routes = [
+    Route('/', index),
+    Route('/siri-east', east),
+    Route('/siri-west', west),
+    Mount('/static', app=StaticFiles(directory='static'), name="static"),
+]
+app = Starlette(debug=True, routes=routes)
+
+if __name__ == '__main__':
+    uvicorn.run(app, host='0.0.0.0', port=80)

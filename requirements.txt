@@ -1,2 +1,4 @@
-responder
-typesystem==0.2.5
+starlette
+uvicorn
+requests
+jinja2

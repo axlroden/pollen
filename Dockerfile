@@ -11,14 +11,15 @@ RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
     && apt-get update \
     && apt-get -y --no-install-recommends install \
         language-pack-da language-pack-da-base \
-        python3-pip python3-pkg-resources python3-setuptools python3-wheel
+        python3-pip python3-pkg-resources python3-setuptools python3-wheel \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 RUN set -ex && mkdir /app
 WORKDIR /app
-COPY . /app
+COPY app /app
 
 CMD python3 main.py
 EXPOSE 80

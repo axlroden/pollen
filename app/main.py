@@ -8,7 +8,6 @@ import requests
 import json
 import sys
 from datetime import datetime
-import locale
 
 # Id is determined from the json feed from dagenspollental website
 pollen_index = {
@@ -22,7 +21,6 @@ pollen_index = {
 templates = Jinja2Templates(directory="templates")
 
 async def index(request):
-    locale.setlocale(locale.LC_TIME, 'da_DK.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
     headers = {
         "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -36,7 +34,6 @@ async def index(request):
 
 
 async def east(request):
-    locale.setlocale(locale.LC_TIME, 'en_US.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
     headers = {
         "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -49,7 +46,6 @@ async def east(request):
     return content
 
 async def west(request):
-    locale.setlocale(locale.LC_TIME, 'en_US.utf8')
     date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
     headers = {
         "Cache-Control": "no-cache, no-store, must-revalidate",

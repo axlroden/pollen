@@ -7,8 +7,8 @@ ENV PORT '80'
 ENV PYTHONDONTWRITEBYTECODE 1
 
 # -- Install
-RUN apt update
-RUN apt install language-pack-da python3-pip -y
+RUN apt-get update
+RUN apt-get install language-pack-da python3-pip -y
 
 RUN pip install responder typesystem==0.2.5
 

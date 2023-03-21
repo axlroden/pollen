@@ -29,4 +29,4 @@ Change to http://pollen.axlrod.dk/siri-east or http://pollen.axlrod.dk/siri-west
 
 Or create a shortcut for both.
 
-![Shortcuts](static/shortcuts.jpg?raw=true "Shortcuts")
+![Shortcuts](app/static/shortcuts.jpg?raw=true "Shortcuts")

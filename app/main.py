@@ -18,6 +18,8 @@ pollen_index = {
     '28': {'type': 'græs'},
     '31': {'type': 'bynke'}
 }
+feed = 'https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed'
+
 templates = Jinja2Templates(directory="templates")
 
 async def index(request):
@@ -34,7 +36,7 @@ async def index(request):
 
 
 async def east(request):
-    date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    date, pollen_data = render_pollen(feed)
     headers = {
         "Cache-Control": "no-cache, no-store, must-revalidate",
         "Pragma": "no-cache",
@@ -46,7 +48,7 @@ async def east(request):
     return content
 
 async def west(request):
-    date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    date, pollen_data = render_pollen(feed)
     headers = {
         "Cache-Control": "no-cache, no-store, must-revalidate",
         "Pragma": "no-cache",

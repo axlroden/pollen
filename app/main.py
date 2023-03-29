@@ -23,7 +23,7 @@ feed = 'https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed'
 templates = Jinja2Templates(directory="templates")
 
 async def index(request):
-    date, pollen_data = render_pollen('https://www.astma-allergi.dk/umbraco/Api/PollenApi/GetPollenFeed')
+    date, pollen_data = render_pollen(feed)
     headers = {
         "Cache-Control": "no-cache, no-store, must-revalidate",
         "Pragma": "no-cache",

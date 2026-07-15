@@ -29,8 +29,8 @@ async def index(request):
         "Pragma": "no-cache",
         "Expires": "0"
     }
-    content = templates.TemplateResponse("index.html",
-                                         {"request": request, "last_updated": date, **pollen_data},
+    content = templates.TemplateResponse(request, "index.html",
+                                         {"last_updated": date, **pollen_data},
                                          headers=headers)
     return content
 
@@ -42,8 +42,8 @@ async def east(request):
         "Pragma": "no-cache",
         "Expires": "0"
     }
-    content = templates.TemplateResponse("siri-east.html",
-                                         {"request": request, "last_updated": date, **pollen_data},
+    content = templates.TemplateResponse(request, "siri-east.html",
+                                         {"last_updated": date, **pollen_data},
                                          headers=headers)
     return content
 
@@ -54,8 +54,8 @@ async def west(request):
         "Pragma": "no-cache",
         "Expires": "0"
     }
-    content = templates.TemplateResponse("siri-west.html",
-                                         {"request": request, "last_updated": date, **pollen_data},
+    content = templates.TemplateResponse(request, "siri-west.html",
+                                         {"last_updated": date, **pollen_data},
                                          headers=headers)
     return content
 

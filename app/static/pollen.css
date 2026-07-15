@@ -1,10 +1,163 @@
-.table {
-    margin: 0 auto;
-    width: 300px !important; 
-    font-size: 25px;
+:root {
+  --bg: #eef2ea;
+  --bg-accent: #dfeadb;
+  --card: #ffffff;
+  --card-border: rgba(20, 33, 15, 0.08);
+  --shadow: 0 1px 2px rgba(20, 33, 15, 0.06), 0 12px 32px rgba(20, 33, 15, 0.10);
+  --text: #14210f;
+  --muted: #5f6b58;
+  --accent: #2f8f4e;
+  --accent-soft: #e4f2e6;
+  --row-border: rgba(20, 33, 15, 0.07);
+  --zero: #b1bba8;
 }
 
-p {
-    color:rgba(0,0,0,0.6);
-    font-size: 12px;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e130c;
+    --bg-accent: #141b10;
+    --card: #171d13;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 14px 34px rgba(0, 0, 0, 0.45);
+    --text: #e7efe2;
+    --muted: #94a08b;
+    --accent: #6ec178;
+    --accent-soft: rgba(110, 193, 120, 0.14);
+    --row-border: rgba(255, 255, 255, 0.07);
+    --zero: #58614f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(env(safe-area-inset-top) + 24px)
+           calc(env(safe-area-inset-right) + 16px)
+           calc(env(safe-area-inset-bottom) + 24px)
+           calc(env(safe-area-inset-left) + 16px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(120% 90% at 50% 0%, var(--bg-accent) 0%, var(--bg) 55%) fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card-header {
+  text-align: center;
+  padding: 28px 24px 20px;
+  background: linear-gradient(180deg, var(--accent-soft) 0%, transparent 100%);
+}
+
+.card-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.card-header .leaf {
+  margin-right: 0.35em;
+}
+
+.updated {
+  margin: 6px 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.pollen-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.pollen-table th,
+.pollen-table td {
+  padding: 14px 20px;
+  border-top: 1px solid var(--row-border);
+}
+
+.pollen-table thead th {
+  border-top: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.pollen-table thead th:first-child {
+  text-align: left;
+}
+
+.pollen-table thead th:not(:first-child),
+.pollen-table td.val {
+  text-align: right;
+  width: 78px;
+}
+
+.pollen-table tbody th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.pollen-table td.val {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-feature-settings: "tnum";
+}
+
+.pollen-table td.val.zero {
+  color: var(--zero);
+  font-weight: 500;
+}
+
+.pollen-table tbody tr:last-child th,
+.pollen-table tbody tr:last-child td {
+  padding-bottom: 18px;
+}
+
+.card-footer {
+  padding: 16px 24px calc(20px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--row-border);
+  text-align: center;
+  background: linear-gradient(0deg, var(--bg-accent) 0%, transparent 100%);
+}
+
+.card-footer p {
+  margin: 4px 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.card-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
 }

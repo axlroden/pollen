@@ -1,14 +1,20 @@
 {
   "short_name": "Pollental",
   "name": "Pollental",
+  "description": "Danske pollental – øst og vest",
+  "lang": "da",
   "icons": [
     {
       "src": "/static/pollen.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "background_color": "#eef2ea",
+  "theme_color": "#eef2ea"
 }

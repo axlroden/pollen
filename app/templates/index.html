@@ -1,56 +1,37 @@
  {%- extends "base.html" %}
- 
+
+ {% macro cell(v) -%}
+ <td class="val{{ ' zero' if v == '0' else '' }}">{{ v }}</td>
+ {%- endmacro %}
+
  {% block content %}
-   <div class="container">
-     <div class="pollen">
-        <h1 class="text-center">Pollen tal</h1>
-        <p class="text-center" id="last_updated">Sidst opdateret: {{ last_updated }}</p>
-     </div>
-     <div class="table table-hover table-responsive table-sm">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Pollen</th>
-                    <th>Øst</th>
-                    <th>Vest</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>El</td>
-                    <td id="el-øst">{{ el_øst }}</td>
-                    <td id="el-vest">{{ el_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Hassel</td>
-                    <td id="hassel-øst">{{ hassel_øst }}</td>
-                    <td id="hassel-vest">{{ hassel_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Elm</td>
-                    <td id="elm-øst">{{ elm_øst }}</td>
-                    <td id="elm-vest">{{ elm_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Birk</td>
-                    <td id="birk-øst">{{ birk_øst }}</td>
-                    <td id="birk-vest">{{ birk_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Græs</td>
-                    <td id="græs-øst">{{ græs_øst }}</td>
-                    <td id="græs-vest">{{ græs_vest }}</td>
-                </tr>
-                <tr>
-                    <td>Bynke</td>
-                    <td id="bynke-øst">{{ bynke_øst }}</td>
-                    <td id="bynke-vest">{{ bynke_vest }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="container">
-        <p class="text-center"><a href="https://www.astma-allergi.dk">Data hentet fra Astma og Allergi Danmark</a></p>
-        <p class="text-center"><a class="github-button" href="https://github.com/axlroden/pollen" data-size="large" aria-label="pollen on GitHub">Source</a><script async defer src="https://buttons.github.io/buttons.js"></script></p>
-    </div>
+   <main class="card">
+     <header class="card-header">
+       <h1><span class="leaf">🌾</span>Pollental</h1>
+       <p class="updated">Sidst opdateret: {{ last_updated }}</p>
+     </header>
+
+     <table class="pollen-table">
+       <thead>
+         <tr>
+           <th scope="col">Pollen</th>
+           <th scope="col">Øst</th>
+           <th scope="col">Vest</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr><th scope="row">El</th>{{ cell(el_øst) }}{{ cell(el_vest) }}</tr>
+         <tr><th scope="row">Hassel</th>{{ cell(hassel_øst) }}{{ cell(hassel_vest) }}</tr>
+         <tr><th scope="row">Elm</th>{{ cell(elm_øst) }}{{ cell(elm_vest) }}</tr>
+         <tr><th scope="row">Birk</th>{{ cell(birk_øst) }}{{ cell(birk_vest) }}</tr>
+         <tr><th scope="row">Græs</th>{{ cell(græs_øst) }}{{ cell(græs_vest) }}</tr>
+         <tr><th scope="row">Bynke</th>{{ cell(bynke_øst) }}{{ cell(bynke_vest) }}</tr>
+       </tbody>
+     </table>
+
+     <footer class="card-footer">
+       <p><a href="https://www.astma-allergi.dk">Data fra Astma og Allergi Danmark</a></p>
+       <p><a href="https://github.com/axlroden/pollen">Kilde på GitHub</a></p>
+     </footer>
+   </main>
  {%- endblock %}

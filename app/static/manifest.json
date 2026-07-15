@@ -5,8 +5,8 @@
   "lang": "da",
   "icons": [
     {
-      "src": "/static/pollen.png",
-      "sizes": "192x192",
+      "src": "/static/pollen.png?v=20260715",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }

@@ -99,7 +99,7 @@ routes = [
     Route('/siri-west', west),
     Mount('/static', app=StaticFiles(directory='static'), name="static"),
 ]
-app = Starlette(debug=True, routes=routes)
+app = Starlette(routes=routes)
 
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0', port=80)
